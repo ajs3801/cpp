@@ -3,7 +3,7 @@
 //cout = console output, cin = console input
 
 //Next is project which use cout and cin.
-//[project1] 
+//[project1]
 // input 2 integer and sum two integer and print out the sum
 
 
