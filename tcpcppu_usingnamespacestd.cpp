@@ -6,14 +6,14 @@ using namespace std;
 int main(void)
 {
 	cout << "Hello, world!";
-//  std::cout << "Hello, world!"라고 할 필요 없음.
-//  #부분과 함수 사이에 using namespace std를 사용하면 std::cout 생략가능 
+//  You don't need to use std::cout becasue using namespace std exists.
+//  if you type "using namespace std" between #-section and function-section, you can omit "std::cout".
 	
 	return 0;
 }
 //main code end--------------------------------------------------------------------------------------
 
-/* [실행 결과]
+/* [result console]
 Hello, world!
 */
  
