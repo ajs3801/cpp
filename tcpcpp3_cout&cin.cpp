@@ -24,7 +24,6 @@ int main(void)
 	std::cout<<"[Input second age] : ";
 	std::cin>>age2;
 	
-	
 	sum = age1 + age2;
 	std::cout<<sum;
 	
