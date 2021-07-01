@@ -1,11 +1,13 @@
-//cout와 cin
-//쉽게 말해 cout는 print하는 것이고 cin은 scan하는 것이다.
-//cout = console output의 줄임말이고, cin은 console input의 줄임말이다. 
+//cout and cin
+//cout prints out date and cin scans data.
+//cout = console output, cin = console input
 
-//다음은 이를 활용한 project임 
+//Next is project which use cout and cin.
 //[project1] 
-// 2개의 숫자를 입력받아 2개의 숫자를 더한 값을 출력하는 간단한 프로그램 
+// input 2 integer and sum two integer and print out the sum
 
+
+//main code------------------------------------------------------
 #include <iostream>
 
 int main(void)
@@ -27,5 +29,5 @@ int main(void)
 	std::cout<<sum;
 	
 	return 0;
-	
 } 
+//main code end ---------------------------------------------------
