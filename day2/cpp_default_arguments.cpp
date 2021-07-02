@@ -28,3 +28,10 @@ int boxVolume (int length , int width, int height)
 {
 	return length * width * height;
 }
+
+/* [console result]
+The default box volume is: 1
+The volume of a box with length 10 is 10
+The volume of a box with length 10 width 5 is 50
+The volume of a box with length 10 width 5 height 2 is 100
+*/
