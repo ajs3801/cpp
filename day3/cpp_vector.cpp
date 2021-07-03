@@ -9,6 +9,8 @@ using namespace std;
 void outputVector(const vector< int > &); //display the vector.
 void inputVector(vector< int > &); //input values into the vector.
 
+
+//main function----------------------------------------------------------------------------
 int main(void)
 {
 	vector< int > integers1(7); //7-element vector<int>
@@ -34,6 +36,82 @@ int main(void)
 	outputVector(integers1);
 	cout << "integers2: " << endl;
 	outputVector(integers2);
-
+	
+	//use inequality != operator with vector objects
+	cout << "\nEvaluating: integer1 != integers2" << endl;
+	
+	if(integers1 != integers2)
+		cout << "integers1 and integers2 are not equal" << endl;
+	
+	//create vector integers3 using integers1 as an
+	//initializer; print size and contents
+	vector< int > integers3( integers1 ); //copy constructor
+	
+	cout << "\nSize of vector integers3 is " << integers3.size()
+		<<"\nVector after initialization: " << endl;
+	outputVector( integers3 );
+	
+	//use overladed assignment (=) operator
+	cout << "\nAssigning integers2 to integers1: " << endl;
+	integers1 = integers2; // assign integers2 to integers1
+	
+	cout << "integers1:" << endl;
+	outputVector( integers1 );
+	cout << "integers2:" << endl;
+	outputVector( integers2 );
+	
+	//use equality (==) operator with vector objects
+	cout << "\nEvaluating: integers1 == integers2" << endl;
+	
+	if ( integers1 == integers2 )
+		cout << "integers1 and integers2 are equal" << endl;
+		
+	//use square brackets to create rvalue
+	cout << "\nintegers1[5] is " << integers1[5];
+	
+	//use square brackests to create lvalue
+	cout << "\n\nAssigning 1000 to integers1[5]" << endl;
+	integers1[5] = 1000;
+	cout <<"integers1: " << endl;
+	outputVector( integers1 );
+	
+	//attempt to use out-of-range subscript
+	try
+	{
+		cout << "\nAttempt to display integers1.at( 15 )" << endl;
+		cout << integers1.at( 15 ) << endl; //ERROR : out of range
+	}
+	
+	catch ( out_of_range &ex)
+	{
+		cout << "An exception occurred: " << ex.what() << endl;
+	}
 	return 0;
+}
+//main function end------------------------------------------------------------------------
+
+
+//output vector contents
+void outputVector( const vector< int > &array )
+{
+	size_t i;
+	for (i=0 ; i<array.size(); ++i)
+	{
+		cout << setw( 12 ) << array[i];
+		
+		if ((i+1) % 4 == 0) //4 numbers per row of output
+			cout << endl;
+	}
+	
+	if (i % 4 != 0)
+		cout << endl;
+}
+
+//input vector contents
+void inputVector( vector< int > &array)
+{
+	for (size_t i=0 ; i < array.size(); ++i)
+	{
+		cin >> array[ i ];
+	}
 }
